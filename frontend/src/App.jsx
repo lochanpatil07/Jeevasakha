@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+
 import Hero from "./components/Hero";
+import Features from "./components/Features";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -14,17 +16,22 @@ import Meditation from "./pages/Meditation";
 import Emergency from "./pages/Emergency";
 import Progress from "./pages/Progress";
 
-import Features from "./components/Features";
+function Home() {
+  return (
+    <>
+      <Hero />
+      <Features />
+    </>
+  );
+}
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Features />
 
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
 

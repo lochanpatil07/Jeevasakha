@@ -2,63 +2,61 @@ function Login() {
   return (
     <div
       style={{
-        minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "#F8FAFC",
+        minHeight: "90vh",
+        background: "#EEF2FF",
       }}
     >
       <div
         style={{
-          width: "400px",
-          padding: "40px",
           background: "white",
-          borderRadius: "12px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+          padding: "40px",
+          borderRadius: "15px",
+          width: "400px",
+          boxShadow: "0 10px 30px rgba(0,0,0,.1)",
         }}
       >
-        <h1 style={{ textAlign: "center", color: "#4F46E5" }}>
-          Login
-        </h1>
+        <h1>Login</h1>
 
         <input
           type="email"
           placeholder="Email"
-          style={{
-            width: "100%",
-            padding: "12px",
-            marginTop: "20px",
-            marginBottom: "15px",
-          }}
+          style={inputStyle}
         />
 
         <input
           type="password"
           placeholder="Password"
-          style={{
-            width: "100%",
-            padding: "12px",
-            marginBottom: "20px",
-          }}
+          style={inputStyle}
         />
 
-        <button
-          style={{
-            width: "100%",
-            padding: "12px",
-            background: "#4F46E5",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
-          }}
-        >
+        <button style={buttonStyle}>
           Login
         </button>
       </div>
     </div>
   );
 }
+
+const inputStyle = {
+  width: "100%",
+  padding: "15px",
+  marginTop: "20px",
+  borderRadius: "8px",
+  border: "1px solid #ccc",
+};
+
+const buttonStyle = {
+  width: "100%",
+  marginTop: "25px",
+  padding: "15px",
+  background: "#4F46E5",
+  color: "white",
+  border: "none",
+  borderRadius: "8px",
+  cursor: "pointer",
+};
 
 export default Login;
